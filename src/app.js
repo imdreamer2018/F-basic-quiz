@@ -9,27 +9,29 @@ if (fetchUrl !== "users" || !UserIdRegExp.test(userId)) {
   alert("404");
   window.location.replace("/users/1");
 }
+export const RenderUserInfo = (id) => {
+  getUserInfo(id)
+    .then((data) => {
+      document
+        .getElementById("header-user-avatar")
+        .setAttribute("src", data.avatar);
+      document.getElementById("header-user-name").innerText = data.name;
+      document.getElementById("header-user-age").innerText = data.age;
+      document.getElementById("user-about-me-description").innerText =
+        data.description;
+    })
+    .catch((error) => {
+      console.log(error);
+      window.location.replace("/users/1");
+    });
+};
 
-getUserInfo(userId)
-  .then((data) => {
-    document
-      .getElementById("header-user-avatar")
-      .setAttribute("src", data.avatar);
-    document.getElementById("header-user-name").innerText = data.name;
-    document.getElementById("header-user-age").innerText = data.age;
-    document.getElementById("user-about-me-description").innerText =
-      data.description;
-  })
-  .catch((error) => {
-    console.log(error);
-    window.location.replace("/users/1");
-  });
-
-getUserEducations(userId).then((data) => {
-  const userEducationList = document.getElementById("user-education-list");
-  data.forEach((education) => {
-    const educationItem = document.createElement("li");
-    educationItem.innerHTML = `
+export const renderUserEducations = (id) => {
+  getUserEducations(id).then((data) => {
+    const userEducationList = document.getElementById("user-education-list");
+    data.forEach((education) => {
+      const educationItem = document.createElement("li");
+      educationItem.innerHTML = `
       <div class="education-item">
         <h2 class="education-item-year">${education.year}</h2>
         <div class="education-item-content">
@@ -38,6 +40,10 @@ getUserEducations(userId).then((data) => {
         </div>
       </div>
     `;
-    userEducationList.appendChild(educationItem);
+      userEducationList.appendChild(educationItem);
+    });
   });
-});
+};
+
+RenderUserInfo(userId);
+renderUserEducations(userId);

@@ -1,5 +1,7 @@
 import { handleResponse } from "../_helpers/handle-response";
 
+const fetch = require("node-fetch");
+
 const apiUrl = "http://127.0.0.1:8080";
 
 export function getUserInfo(userId) {
