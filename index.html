@@ -1,13 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Resume</title>
-</head>
-<body>
-  <script src="src/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Resume</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="header-user">
+        <div class="header-user-logo">
+          <img src="./src/assets/avatar.jpg" alt="header-logo" />
+        </div>
+        <div class="header-user-content">
+          <p class="header-user-hello">Hello,</p>
+          <p class="header-user-description">
+            MY NAME IS
+            <span id="header-user-name"></span>
+            <span id="header-user-age"></span>
+            AND THIS IS MY RESUME/CV
+          </p>
+        </div>
+        <div class="header-border-bottom"></div>
+      </header>
+      <div class="main-content">
+        <div class="user-about-me">
+          <h1 class="user-about-me-title">ABOUT ME</h1>
+          <p class="user-about-me-description">123</p>
+        </div>
+        <div class="user-education">
+          <h1 class="user-education-title">EDUCATION</h1>
+          <ul id="user-education-list"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="src/app.js"></script>
+  </body>
 </html>

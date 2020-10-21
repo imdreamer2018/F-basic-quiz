@@ -1,3 +1,66 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+body {
+  background-color: $gray-light;
+}
+
+.main {
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: white;
+}
+
+.main-content {
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.header-user {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header-user-logo {
+  height: 100px;
+}
+
+.header-user-logo img {
+  position: relative;
+  top: -100px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.header-user-content {
+  font-family: $font-family-base;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-user-hello {
+  font-size: 30px;
+}
+
+.header-border-bottom {
+  width: 95%;
+  border: 3px solid $gray-light;
+}
+
+.user-about-me-title {
+  color: $primary-color;
+}
+.user-education-title {
+  color: $primary-color;
+}
+
+.user-about-me-description {
+  font-family: $font-family-base;
+  font-size: 20px;
+}
