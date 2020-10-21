@@ -13,6 +13,9 @@
     "lint": "eslint \"src/\" --cache --fix --format table",
     "format": "prettier --write \"src/**/*.{js,css,scss,html}\""
   },
+  "dependencies": {
+    "config": "^3.3.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.10.1",

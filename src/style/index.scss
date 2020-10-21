@@ -7,16 +7,12 @@ body {
 }
 
 .main {
-  margin-top: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 10% 5% 5%;
   background-color: white;
 }
 
 .main-content {
-  padding-top: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding: 1% 2% 2%;
 }
 
 .header-user {
@@ -63,4 +59,24 @@ body {
 #user-about-me-description {
   font-family: $font-family-base;
   font-size: 20px;
+}
+
+.education-item {
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.education-item-content {
+  margin-left: 5%;
+  background-color: $gray-light;
+  width: 92%;
+  padding-left: 2%;
+}
+
+.education-item-year {
+  margin-top: 0;
+}
+
+.education-item-desc {
+  font-size: 15px;
 }
