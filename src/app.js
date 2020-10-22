@@ -22,7 +22,6 @@ export const RenderUserInfo = (id) => {
     })
     .catch((error) => {
       console.log(error);
-      window.location.replace("/users/1");
     });
 };
 
